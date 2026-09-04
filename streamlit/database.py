@@ -1,11 +1,13 @@
+import streamlit as st
 import mysql.connector
 
 
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",
-        port=3306,
-        user="root",
-        password="Vishnu2005v",
-        database="olist_ecommerce"
+        host=st.secrets["mysql"]["host"],
+        port=st.secrets["mysql"]["port"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"],
+        ssl_disabled=False
     )
