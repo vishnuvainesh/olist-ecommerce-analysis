@@ -8,7 +8,7 @@ conn = mysql.connector.connect(
     host="localhost",
     port=3306,
     user="root",
-    password="Vishnu2005v",
+    password="Password",
     database="olist_ecommerce"
 )
 
